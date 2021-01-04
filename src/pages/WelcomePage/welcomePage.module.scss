@@ -1,0 +1,376 @@
+@import "src/vars";
+
+.helloBlock {
+  .background {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background-image: url('../../images/bg.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    //overflow: hidden;
+    //transform: translateZ(-1px) scale(1.1);
+    //background-repeat: no-repeat;
+  }
+
+  .content {
+    z-index: 9000;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h1 {
+      color: white;
+      text-transform: uppercase;
+      font-size: 6em;
+      margin: 0;
+
+      b {
+        color: $mainColor;
+      }
+    }
+
+    p {
+      color: white;
+      font-size: 1.2em;
+      font-weight: 600;
+    }
+  }
+}
+
+.goDown {
+  .secretDown {
+    position: absolute;
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+
+  color: white;
+  font-weight: 600;
+  font-size: 18px;
+  position: absolute;
+  bottom: 15px;
+  border: 2px #888888 solid;
+  border-radius: 30px;
+  height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  width: 25px;
+  overflow: hidden;
+
+  i {
+    transition: all 0.3s;
+  }
+
+  &:hover {
+    border: 2px white solid;
+
+    .mainDown {
+      transform: translateY(30px);
+      opacity: 0;
+    }
+
+    .secretDown {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+}
+
+.loginBtn {
+  transition: all 0.3s;
+  margin-top: 30px;
+  text-transform: uppercase;
+  font-size: 1.2em;
+  font-weight: 500;
+  padding: 15px 40px 15px 40px;
+  border: 3px $mainColor solid;
+  border-radius: 40px;
+
+  &:hover {
+    background-color: $mainColor;
+  }
+}
+
+.particles {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+}
+
+.aboutBlock {
+  padding: 60px 0 60px 0;
+}
+
+.description {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  color: $black;
+
+  h2 {
+    margin: 20px 0;
+    font-size: 2.6em;
+    font-weight: bold;
+
+    b {
+      color: $mainColor;
+    }
+  }
+
+  h5 {
+    margin: 0;
+    font-size: 1em;
+    color: $black;
+    font-weight: 500;
+
+    b {
+      color: $mainColor;
+    }
+  }
+
+  p {
+    color: $blackText;
+    width: 50%;
+    text-align: center;
+  }
+}
+
+.descriptionBlocks {
+  margin-top: 60px;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.descriptionItem {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  i {
+    position: absolute;
+    top: -20px;
+    color: rgba($black, 0.2);
+    left: 25px;
+    font-size: 4em;
+  }
+
+  h2 {
+    font-size: 1.3em;
+    text-transform: uppercase;
+    color: $black;
+
+    b {
+      color: $mainColor;
+    }
+  }
+
+  p {
+    color: $blackText;
+    width: 80%;
+  }
+}
+
+.delimiter {
+  margin-bottom: 20px;
+  width: 60px;
+  height: 3px;
+  background-color: $mainColor;
+}
+
+.descriptionBlack {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  color: white;
+
+  h2 {
+    margin: 20px 0;
+    font-size: 2.6em;
+    font-weight: bold;
+
+    b {
+      color: $mainColor;
+    }
+  }
+
+  h5 {
+    margin: 0;
+    font-size: 1em;
+    color: white;
+    font-weight: 500;
+
+    b {
+      color: $mainColor;
+    }
+  }
+
+  p {
+    color: whitesmoke;
+    width: 50%;
+    text-align: center;
+  }
+}
+
+.services {
+  padding: 50px 0;
+  width: 100%;
+  height: 100%;
+  background-blend-mode: multiply;
+  background-image: url("../../images/services.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  background-color: rgba(black, 0.9);
+}
+
+.descriptionCards {
+  margin-top: 60px;
+  width: 100%;
+  display: grid;
+  grid-column-gap: 15px;
+  grid-row-gap: 15px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.descriptionServices {
+  padding: 15px;
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-column-gap: 200px;
+  color: white;
+}
+
+.headingServices {
+  h2 {
+    font-weight: 500;
+  }
+
+  p {
+    font-size: 1.1em;
+  }
+}
+
+.servicesList {
+  font-size: 1.2em;
+  line-height: 28px;
+  list-style-image: url('../../images/marker.png');
+  list-style-type: circle;
+}
+
+.howItWorks {
+  padding: 60px 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../images/services.jpg");
+  background-size: cover;
+  background-blend-mode: screen;
+  background-color: #ffffffd9;
+}
+
+.workCards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 50px 0 0 0;
+  grid-row-gap: 30px;
+}
+
+.workProgress{
+  background-image: url("../../images/table.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-blend-mode: multiply;
+  background-color: rgba(black, 0.9);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 50px 50px;
+  grid-row-gap: 40px;
+  .descriptionBlack{
+    align-items: start;
+  }
+  p{
+    width: 100%;
+    text-align: left;
+  }
+  h2{
+    font-size: 1.6em;
+    text-align: left;
+  }
+}
+
+.workIcon{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  color: white;
+  h2{
+    font-size: 1.4em;
+    font-weight: 300;
+  }
+  i{
+    font-size: 3.8em;
+  }
+}
+
+
+@media (max-width: 1200px) {
+  .descriptionBlocks {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+
+  .content {
+    h1 {
+      font-size: 4.5em !important;
+    }
+  }
+  .descriptionCards {
+    grid-template-columns: 1fr 1fr;
+  }
+  .descriptionServices {
+    grid-template-columns: 1fr;
+  }
+  .workCards{
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 600px) {
+  .workProgress{
+    grid-template-columns: 1fr;
+    padding: 50px 10px;
+  }
+  .content {
+    h1 {
+      font-size: 3em !important;
+    }
+  }
+  .workCards{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 400px) {
+
+}

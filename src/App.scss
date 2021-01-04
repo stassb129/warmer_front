@@ -1,0 +1,54 @@
+@import "vars";
+
+a {
+  text-decoration: none;
+  color: white;
+}
+
+.container{
+  width: 85%;
+  margin: 0 auto;
+}
+
+.panelContainer{
+  width: 95%;
+  margin: 0 auto;
+}
+
+/* 1 - скроллбар */
+::-webkit-scrollbar {
+  width: 7px;
+}
+/* 2 - кнопка */
+::-webkit-scrollbar-button {
+
+}
+/* 3 - трек */
+::-webkit-scrollbar-track {
+
+}
+/* 4 - видимая часть трека */
+::-webkit-scrollbar-track-piece {
+}
+/* 5 - ползунок */
+::-webkit-scrollbar-thumb {
+  width: 7px;
+  background-color: $mainColor;
+}
+/* 6 - уголок */
+::-webkit-scrollbar-corner {
+}
+/* 7 - изменение размеров */
+::-webkit-resizer {
+}
+
+::selection {
+  background: rgba($mainColor, 0.6); /* Safari */
+}
+
+
+@media (max-width: 900px) {
+  .container{
+    width: 100%;
+  }
+}

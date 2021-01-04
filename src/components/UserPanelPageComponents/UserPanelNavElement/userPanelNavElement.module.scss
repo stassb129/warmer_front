@@ -1,0 +1,38 @@
+@import "src/vars";
+
+.link {
+  color: $blackText;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  width: 90%;
+  padding: 0 5px;
+  transition: all 0.2s;
+  height: 45px;
+  margin: 10px auto;
+  border-radius: 5px;
+  position: relative;
+
+  &:hover {
+    background-color: rgba(#424242, 0.1);
+    font-weight: bold;
+  }
+
+  i {
+
+  }
+
+  h2 {
+    margin-left: 15px;
+    font-size: 1.2em;
+    font-weight: 500;
+  }
+}
+
+.link_active {
+  background-color: $panelColor;
+  color: white;
+  &:hover{
+    background-color: $panelColor;
+  }
+}

@@ -1,0 +1,28 @@
+.card{
+  background-color: #1b1b1b;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.3s;
+  &:hover{
+    transform: translateY(-7px);
+  }
+  h5{
+    color: white;
+    font-size: 1.8em;
+    margin: 0;
+  }
+  p{
+    color: #c5c5c5;
+    line-height: 1.8em;
+    font-size: 1em;
+    max-width: 80%;
+  }
+  i{
+    font-size: 5em !important;
+    color: #c5c5c5;
+  }
+}
