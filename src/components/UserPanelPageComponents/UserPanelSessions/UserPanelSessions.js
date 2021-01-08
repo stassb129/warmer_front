@@ -12,8 +12,8 @@ function UserPanelSessions() {
     return (
         <section>
             <UserPanelUnderHeader
-                name="Пресеты сессии"
-                description="Тут вы можете редактировать пресеты сессии"/>
+                name="Пресеты сессий"
+                description="Тут вы можете редактировать пресеты сессий"/>
 
 
             <div className="panelContainer">

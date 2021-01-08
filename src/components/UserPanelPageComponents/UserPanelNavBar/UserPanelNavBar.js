@@ -25,7 +25,7 @@ function UserPanelNavBar() {
                     icon="icon-user"/>
 
                 <UserPanelNavElement
-                    text="Пресеты Сессий"
+                    text="Пресеты cессий"
                     path="sessions"
                     icon="icon-sun-filled"/>
 
