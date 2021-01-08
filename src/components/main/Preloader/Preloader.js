@@ -2,12 +2,15 @@ import css from './preloader.module.scss'
 
 function Preloader() {
     return(
+        <div className={css.preloader}>
             <div className={css.lds_ellipsis}>
                 <div></div>
                 <div></div>
                 <div></div>
                 <div></div>
             </div>
+        </div>
+
     )
 }
 

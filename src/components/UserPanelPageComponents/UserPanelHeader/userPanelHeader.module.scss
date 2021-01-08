@@ -19,15 +19,13 @@
 }
 
 .profile {
+  color: white;
   cursor: pointer;
-  background-color: white;
-  width: 40px;
-  height: 40px;
-  border-radius: 100px;
-  background-image: url("../../../images/profile.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center;
+  transition: 0.3s all;
+  &:hover{
+    color: #ff9393;
+
+  }
 }
 
 .subscribe{

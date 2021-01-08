@@ -7,6 +7,7 @@ import UserPanelSessions from "../UserPanelSessions/UserPanelSessions";
 import UserPanelSettings from "../UserPanelSettings/UserPanelSettings";
 import UserPanelMessage from "../UserPanelMessage/UserPanelMessage";
 import UserPanelUnderHeader from "../UserPanelUnderHeader/UserPanelUnderHeader";
+import UserPanelProfileManager from "../UserPanelProfileManager/UserPanelProfileManager";
 
 function  UserPanelContent() {
     return (
@@ -18,6 +19,7 @@ function  UserPanelContent() {
                 <Route path='/shops' component={UserPanelShops} />
                 <Route path='/accounts' component={UserPanelAccounts} />
                 <Route path='/sessions' component={UserPanelSessions} />
+                <Route path='/profiles' component={UserPanelProfileManager} />
                 <Route path='/settings' component={UserPanelSettings} />
                 <Route path='/message' component={UserPanelMessage} />
             </Switch>

@@ -43,10 +43,10 @@ function Header() {
             </div>
 
             <nav className={css.nav}>
-                <Link className={css.navLink} to="/pisya">О НАС </Link>
-                <Link className={css.navLink} to="/pisya">услуги</Link>
-                <Link className={css.navLink} to="/pisya">работы</Link>
-                <Link className={css.navLink} to="/pisya">Контакты</Link>
+                <Link className={css.navLink} to="/#">О НАС </Link>
+                <Link className={css.navLink} to="/#">услуги</Link>
+                <Link className={css.navLink} to="/#">работы</Link>
+                <Link className={css.navLink} to="/#">Контакты</Link>
 
                 <a href="#" className={css.navBtn}><i className="icon-list-nested"/></a>
             </nav>

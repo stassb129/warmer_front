@@ -1,10 +1,11 @@
-@import "src/vars";
+@import "../../../../vars";
 
 .link {
   color: $blackText;
   display: flex;
   justify-content: left;
   align-items: center;
+  text-align: center;
   width: 90%;
   padding: 0 5px;
   transition: all 0.2s;
@@ -24,7 +25,7 @@
 
   h2 {
     margin-left: 15px;
-    font-size: 1.2em;
+    font-size: 1em;
     font-weight: 500;
   }
 }
@@ -34,5 +35,14 @@
   color: white;
   &:hover{
     background-color: $panelColor;
+  }
+}
+
+@media (max-width: 1100px) {
+  .link{
+    padding: 5px 5px;
+    h2 {
+      font-size: 1.1em;
+    }
   }
 }

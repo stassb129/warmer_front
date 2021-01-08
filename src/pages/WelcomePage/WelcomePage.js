@@ -4,8 +4,10 @@ import Header from "../../components/global/Header/Header"
 import BlackDescriptionCard from "../../components/main/BlackDescriptionCard/BlackDescriptionCard"
 import SmallDelimiter from "../../components/main/SmallDelimiter/SmallDelimiter"
 import WorkCard from "../../components/main/WorkCard/WorkCard";
-import {useState} from "react";
+import {useState, useContext} from "react";
 import ModalWindow from "../../components/main/ModalWindow/ModalWindow";
+import {AuthContext} from "../../context/AuthContext";
+import {useHistory} from "react-router-dom";
 
 function WelcomePage() {
 
@@ -13,10 +15,11 @@ function WelcomePage() {
     const [login, setLogin] = useState('')
     const [password, setPassword] = useState('')
 
+    const history = useHistory();
+    const auth = useContext(AuthContext)
+
     const toggleModal = () => {
         isModal === false ? setIsModal(true) : setIsModal(false)
-        console.log(isModal)
-        // console.log('piska')
     }
 
     const loginHandler = (e) => {
@@ -44,7 +47,7 @@ function WelcomePage() {
                     }
                 })
                 const json = await res.json()
-                console.log(json)
+                auth.login(json.token, json.id)
 
             } catch (error) {
                 console.log(error)
@@ -56,11 +59,9 @@ function WelcomePage() {
 
     return (
         <div className={css.wrapper}>
-
+            {/*{history.push('/')}*/}
             {isModal ? <ModalWindow name="Войти в аккаунт" closeModal={toggleModal}>
                 {/*<h2>Modal Name</h2>*/}
-
-
                 <form>
                     <label>
                         Логин от вашего аккаунта:

@@ -1,5 +1,5 @@
 import css from './userPanelNavBar.module.scss'
-import UserPanelNavElement from "../UserPanelNavElement/UserPanelNavElement"
+import UserPanelNavElement from "./UserPanelNavElement/UserPanelNavElement"
 import {useState} from "react"
 
 
@@ -15,19 +15,24 @@ function UserPanelNavBar() {
             <div className={css.navElements}>
 
                 <UserPanelNavElement
-                    text="Магазин"
+                    text="Магазины"
                     path="shops"
                     icon="icon-basket"/>
 
                 <UserPanelNavElement
-                    text="Аккаунты"
+                    text="Мои аккаунты"
                     path="accounts"
                     icon="icon-user"/>
 
                 <UserPanelNavElement
-                    text="Сессии"
+                    text="Пресеты Сессий"
                     path="sessions"
                     icon="icon-sun-filled"/>
+
+                <UserPanelNavElement
+                    text="Менеджер профилей"
+                    path="profiles"
+                    icon="icon-user"/>
 
                 <UserPanelNavElement
                     text="Настройки"

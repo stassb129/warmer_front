@@ -1,4 +1,4 @@
-import {useState, useEffect} from 'react;'
+import {useState, useEffect} from 'react'
 
 const useFetch = (url, options) => {
     const [response, setResponse] = useState(null)
@@ -7,14 +7,14 @@ const useFetch = (url, options) => {
     useEffect(() => {
         const fetchData = async () => {
             try {
-                const res = await fetch(url, options)
+                const res = await fetch('https://accwarmer-api.herokuapp.com/' + url, options)
                 const json = await res.json()
-                setResponse(json)
+                 setResponse(json)
             } catch (error) {
                 setError(error)
             }
         }
-        fetchData()
+         fetchData()
     }, [])
 return {response, error}
 }
