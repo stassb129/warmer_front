@@ -35,20 +35,20 @@ function ModalAddPreset({name, closeModal}) {
                                    type="text"/>
                         </div>
 
-                        <div className={`${css.setting} ${css.select}`}>
-                            <label className={css.label} htmlFor="cursorSpeed">Выберите скорость мыши</label>
-                            <select name="cursorSpeed" placeholder="Выберите скрорость мыши" id="cursorSpeed">
-                                <option value="-1">Медленно</option>
-                                <option value="0">Средне</option>
-                                <option value="1">Быстро</option>
-                            </select>
-                        </div>
+                        {/*<div className={`${css.setting} ${css.select}`}>*/}
+                        {/*    <label className={css.label} htmlFor="cursorSpeed">Выберите скорость мыши</label>*/}
+                        {/*    <select name="cursorSpeed" placeholder="Выберите скрорость мыши" id="cursorSpeed">*/}
+                        {/*        <option value="-1">Медленно</option>*/}
+                        {/*        <option value="0">Средне</option>*/}
+                        {/*        <option value="1">Быстро</option>*/}
+                        {/*    </select>*/}
+                        {/*</div>*/}
 
                         <div className={css.setting}>
                             <label className={css.label} htmlFor="warmAllMinutes">Введите время прогрева</label>
                             <input name="warmAllMinutes"
                                    id="warmAllMinutes"
-                                   placeholder="Введите время прогрева"
+                                   placeholder="60"
                                    type="text"/>
                         </div>
 
@@ -62,44 +62,17 @@ function ModalAddPreset({name, closeModal}) {
                         </div>
 
 
-                        <div className={css.setting}>
-                            <label className={css.label} htmlFor="warmSwitchTypeMinutes">Введите warmSwitchTypeMinutes</label>
-                            <input name="warmSwitchTypeMinutes"
-                                   id="warmSwitchTypeMinutes"
-                                   placeholder="Введите warmSwitchTypeMinutes"
-                                   type="text"/>
-                        </div>
-
-
                         <div className={`${css.setting} ${css.checkbox}`}>
-                            <label className={css.label} htmlFor="isNeedSingleOnSeller">Введите isNeedSingleOnSeller</label>
-                            <input name="isNeedSingleOnSeller"
-                                   id="isNeedSingleOnSeller"
-                                   placeholder="Введите isNeedSingleOnSeller"
-                                   type="checkbox"/>
-                        </div>
-
-
-                        <div className={`${css.setting} ${css.checkbox}`}>
-                            <label className={css.label} htmlFor="isNeedGoogleWarm">Введите isNeedGoogleWarm</label>
-                            <input name="isNeedGoogleWarm"
-                                   id="isNeedGoogleWarm"
-                                   placeholder="Введите isNeedGoogleWarm"
-                                   type="checkbox"/>
-                        </div>
-
-
-                        <div className={`${css.setting} ${css.checkbox}`}>
-                            <label className={css.label} htmlFor="isNeedLikeComments">Введите isNeedLikeComments</label>
+                            <label className={css.label} htmlFor="isNeedLikeComments">Нужно ли оставлять лайки под отзывами</label>
                             <input name="isNeedLikeComments"
                                    id="isNeedLikeComments"
-                                   placeholder="Введите isNeedLikeComments"
+                                   placeholder=""
                                    type="checkbox"/>
                         </div>
 
 
                         <div className={`${css.setting} ${css.checkbox}`}>
-                            <label className={css.label} htmlFor="isNeedLeaveComment">Введите isNeedLeaveComment</label>
+                            <label className={css.label} htmlFor="isNeedLeaveComment">Нужно ли оставлять коментарии под отзывами</label>
                             <input name="isNeedLeaveComment"
                                    id="isNeedLeaveComment"
                                    placeholder="Введите isNeedLeaveComment"
@@ -108,7 +81,7 @@ function ModalAddPreset({name, closeModal}) {
 
 
                         <div className={`${css.setting} ${css.checkbox}`}>
-                            <label className={css.label} htmlFor="isNeedSortByMaxPrice">Введите isNeedSortByMaxPrice</label>
+                            <label className={css.label} htmlFor="isNeedSortByMaxPrice">Нужно ли сортировать товары по максимальной цене</label>
                             <input name="isNeedSortByMaxPrice"
                                    id="isNeedSortByMaxPrice"
                                    placeholder="Введите isNeedSortByMaxPrice"
@@ -117,28 +90,19 @@ function ModalAddPreset({name, closeModal}) {
 
 
                         <div className={`${css.setting}`}>
-                            <label className={css.label} htmlFor="sellerKeyWordsCSV">Введите sellerKeyWordsCSV</label>
+                            <label className={css.label} htmlFor="sellerKeyWordsCSV">Введите ключивые слова для поиска в магазине</label>
                             <input name="sellerKeyWordsCSV"
                                    id="sellerKeyWordsCSV"
-                                   placeholder="Введите sellerKeyWordsCSV"
+                                   placeholder="PlayStation 5, IphoneX, xbox360"
                                    type="text"/>
                         </div>
 
 
                         <div className={`${css.setting}`}>
-                            <label className={css.label} htmlFor="googleKeyWordsCSV">Введите googleKeyWordsCSV</label>
-                            <input name="googleKeyWordsCSV"
-                                   id="googleKeyWordsCSV"
-                                   placeholder="Введите googleKeyWordsCSV"
-                                   type="text"/>
-                        </div>
-
-
-                        <div className={`${css.setting}`}>
-                            <label className={css.label} htmlFor="prioritySellerKeyWordsCSV">Введите prioritySellerKeyWordsCSV</label>
+                            <label className={css.label} htmlFor="prioritySellerKeyWordsCSV">Введите приоритетные ключивые слова для поиска в магазине</label>
                             <input name="prioritySellerKeyWordsCSV"
                                    id="prioritySellerKeyWordsCSV"
-                                   placeholder="Введите prioritySellerKeyWordsCSV"
+                                   placeholder="PlayStation 5, IphoneX, xbox360"
                                    type="text"/>
                         </div>
 

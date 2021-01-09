@@ -13,6 +13,7 @@ import {useEffect} from "react";
 import {fetchData} from "../../../API/FetchData";
 import Preloader from "../../main/Preloader/Preloader";
 import useGlobal from "../../../Store/Store";
+import ModalPortal from "../../main/ModalPortal/ModalPortal";
 
 function UserPanelShops() {
     const [globalState, globalActions] = useGlobal()
@@ -52,14 +53,6 @@ function UserPanelShops() {
     ]
 
 
-    const shopsMass = shops.map((el, index) =>
-        <UserPanelShopElement
-            seller={el.name}
-            logo={el.logo}
-            key={el.id}
-            clickHandler={toggleModal}/>
-    )
-
     if (shops.length < 1) {
         return (
             <div>
@@ -73,21 +66,6 @@ function UserPanelShops() {
 
     return (
         <section>
-            {isModal ? <ModalWindow name="AMAZON" closeModal={toggleModal}>
-                {/*<h2>Modal Name</h2>*/}
-                <form>
-                    <label>
-                        Логин от вашего аккаунта:
-                        <input type="text" placeholder="Логин" name="login"/>
-                    </label>
-                    <label>
-                        Пароль от вашего аккаунта:
-                        <input type="text" placeholder="Пароль" name="password"/>
-                    </label>
-
-                    <input type="submit" value="Активировать"/>
-                </form>
-            </ModalWindow> : null}
 
             <UserPanelUnderHeader
                 name="Магазины"
@@ -95,7 +73,14 @@ function UserPanelShops() {
 
             <div className="panelContainer">
                 <div className={css.shops}>
-                    {shopsMass}
+                    {
+                        shops.map((el, index) =>
+                                <UserPanelShopElement
+                                    seller={el.name}
+                                    logo={el.logo}
+                                    key={index}/>
+                        )
+                    }
                 </div>
 
             </div>

@@ -8,12 +8,12 @@ import {useContext} from "react";
 import Preloader from "../../main/Preloader/Preloader";
 import ModalWindow from "../../main/ModalWindow/ModalWindow";
 import UserPanelAccount from "./UserPanelAccount/UserPanelAccount";
+import useGlobal from "../../../Store/Store";
 
 function UserPanelAccounts() {
 
-
     const [accounts, setAccounts] = useState([])
-    const [SessionModal, setSessionModal] = useState()
+    const [globalState, globalActions] = useGlobal()
 
     const auth = useContext(AuthContext)
 
@@ -25,6 +25,13 @@ function UserPanelAccounts() {
                 'Content-Type': 'application/json'
             }
         }, setAccounts)
+
+        fetchData(`user.settingsPresets?token=${auth.token}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }, globalActions.settings.setSettings)
     }, [])
 
 

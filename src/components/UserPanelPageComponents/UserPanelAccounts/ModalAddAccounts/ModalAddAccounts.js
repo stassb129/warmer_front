@@ -2,9 +2,23 @@ import css from "./modalAddAccounts.module.scss";
 import ModalWindow from "../../../main/ModalWindow/ModalWindow";
 import ModalPortal from "../../../main/ModalPortal/ModalPortal";
 import useGlobal from "../../../../Store/Store";
+import {fetchData} from "../../../../API/FetchData";
+import {useEffect} from "react";
+import {AuthContext} from "../../../../context/AuthContext";
+import {useContext} from "react";
 
 function ModalAddAccounts({closeModal, returnToModal, name, login}) {
     const [globalState, globalActions] = useGlobal()
+    const auth = useContext(AuthContext)
+
+    useEffect(() => {
+        fetchData(`user.settingsPresets?token=${auth.token}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }, globalActions.settings.setSettings)
+    }, [])
 
     const presets = [
         'Preset 1',
@@ -38,8 +52,8 @@ function ModalAddAccounts({closeModal, returnToModal, name, login}) {
                         <label className={css.label} htmlFor="preset">Выберете пресет настроек</label>
                         <select name="preset" id="preset">
                             {
-                                presets.map((el,index) => {
-                                    return <option key={index} value={`${el}`}>{el}</option>
+                                globalState.settings.map((el, index) => {
+                                    return <option key={index} value={`${el.presetName}`}>{el.presetName}</option>
                                 })
                             }
                         </select>
