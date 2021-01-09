@@ -6,7 +6,6 @@ import {useEffect} from "react";
 import {AuthContext} from "../../../context/AuthContext";
 import {useContext} from "react";
 import Preloader from "../../main/Preloader/Preloader";
-import ModalWindow from "../../main/ModalWindow/ModalWindow";
 import UserPanelAccount from "./UserPanelAccount/UserPanelAccount";
 import useGlobal from "../../../Store/Store";
 

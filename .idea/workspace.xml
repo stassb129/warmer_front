@@ -37,7 +37,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/modals" />
     <property name="list.type.of.created.stylesheet" value="SCSS" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
@@ -52,7 +52,11 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="E:\projects\warmer_front\src\modals" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\projects\warmer_front\src\components\main" />
       <recent name="E:\projects\warmer_front\src\components\UserPanelPageComponents\UserPanelNavBar" />
       <recent name="E:\projects\warmer_front\src\hooks" />
       <recent name="E:\projects\warmer_front\src" />
@@ -96,7 +100,7 @@
       <workItem from="1609852821736" duration="26279000" />
       <workItem from="1609948335575" duration="17553000" />
       <workItem from="1610015798946" duration="52609000" />
-      <workItem from="1610174217189" duration="1368000" />
+      <workItem from="1610174217189" duration="16372000" />
     </task>
     <servers />
   </component>

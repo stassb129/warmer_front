@@ -1,0 +1,26 @@
+@import "src/vars";
+
+.submit{
+  background-color: $panelColor !important;
+  transition: 0.3s all;
+  padding: 5px 15px !important;
+  &:hover{
+    background-color: #3d8aea !important;
+  }
+}
+
+
+.form{
+  input[type= "text"] {
+    font-size: 0.9em;
+    padding: 8px 5px;
+    outline: none;
+    border: 0;
+    transition: 0.3s all;
+    border-bottom: 2px solid #a2a2a2;
+
+    &:focus {
+      border-bottom: 2px solid $panelColor;
+    }
+  }
+}

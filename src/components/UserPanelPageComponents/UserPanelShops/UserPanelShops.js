@@ -4,7 +4,6 @@ import UserPanelShopElement from "./UserPanelShopElement/UserPanelShopElement";
 import amazon from '../../../images/logos/amazon.jpg'
 import google from '../../../images/logos/google.png'
 import aliexpress from '../../../images/logos/aliexpress.jpg'
-import ModalWindow from "../../main/ModalWindow/ModalWindow";
 import {useState} from "react";
 import {useFetch} from "../../../hooks/useFetch";
 import {AuthContext} from "../../../context/AuthContext";
@@ -13,7 +12,6 @@ import {useEffect} from "react";
 import {fetchData} from "../../../API/FetchData";
 import Preloader from "../../main/Preloader/Preloader";
 import useGlobal from "../../../Store/Store";
-import ModalPortal from "../../main/ModalPortal/ModalPortal";
 
 function UserPanelShops() {
     const [globalState, globalActions] = useGlobal()
@@ -31,26 +29,6 @@ function UserPanelShops() {
     }, [])
 
     const auth = useContext(AuthContext)
-
-
-    const toggleModal = () => {
-        isModal === false ? setIsModal(true) : setIsModal(false)
-    }
-
-    const sellers = [
-        {
-            name: 'AMAZON',
-            logo: amazon
-        },
-        {
-            name: 'GOOGLE',
-            logo: google
-        },
-        {
-            name: 'ALIEXPRESS',
-            logo: aliexpress
-        }
-    ]
 
 
     if (shops.length < 1) {

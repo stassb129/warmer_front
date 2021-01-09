@@ -3,15 +3,29 @@ import * as actions from "../actions/index";
 import globalHook from 'use-global-hook'
 
 const initialState = {
+    //ЕБУЧИЕ МОДАЛКИ
     modalShops: {
+        isActive: false,
+        name: ''
+    },
+    modalAccount: {
+        isActive: false,
+        name: '',
+        login: ''
+    },
+    modalSession: {
+        isActive: false,
+        name: '',
+        login: ''
+    },
+    modalPreset: {
         isActive: false
     },
-    modalAddPreset: {
+    modalProfile: {
         isActive: false
     },
-    modalAddProfile: {
-        isActive: false
-    },
+
+    //Настройки
     settings: []
 };
 

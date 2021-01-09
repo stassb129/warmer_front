@@ -8,12 +8,17 @@ import UserPanelSettings from "../UserPanelSettings/UserPanelSettings";
 import UserPanelMessage from "../UserPanelMessage/UserPanelMessage";
 import UserPanelUnderHeader from "../UserPanelUnderHeader/UserPanelUnderHeader";
 import UserPanelProfileManager from "../UserPanelProfileManager/UserPanelProfileManager";
+import ModalWindow from "../../main/ModalWindow/ModalWindow";
+import ModalsIndex from "../../../modals/ModalsIndex";
+
 
 function  UserPanelContent() {
     return (
         <div className={css.content}>
 
             <UserPanelHeader />
+
+            <ModalsIndex />
 
             <Switch>
                 <Route path='/shops' component={UserPanelShops} />
