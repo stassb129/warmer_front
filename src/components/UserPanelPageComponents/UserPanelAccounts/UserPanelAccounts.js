@@ -47,13 +47,11 @@ function UserPanelAccounts() {
     }
 
     const accountCounts = accounts.map((e, index) =>
-
             <UserPanelAccount
                 seller={e.seller.name}
                 login={e.login}
                 key={index}
-                data={e}
-            />
+                data={e}/>
         // <div className={css.account}>
         //     <p>{e.seller.name}</p>
         //     <p>{e.login}</p>
@@ -77,8 +75,6 @@ function UserPanelAccounts() {
 
                 </div>
             </div>
-
-
         </div>
 
 

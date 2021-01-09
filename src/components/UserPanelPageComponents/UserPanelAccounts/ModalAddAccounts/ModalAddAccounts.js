@@ -36,7 +36,7 @@ function ModalAddAccounts({closeModal, returnToModal, name, login}) {
     return (
         <ModalPortal>
             <ModalWindow name={name} closeModal={closeModal}>
-
+                {console.log('piska')}
                 <div onClick={() => {
                     returnToModal()
                     closeModal()
