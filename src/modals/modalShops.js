@@ -32,7 +32,7 @@ function ModalShops(props) {
                 })
                 const json = await res.json()
 
-                console.log(json)
+                console.log(json.body)
 
             } catch (error) {
                 console.log(error)

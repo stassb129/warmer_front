@@ -24,13 +24,11 @@ export const toggleModalSession = (store, {name ,login}) => {
             name: name,
             login: login
         }});
-    console.log('Session')
 };
 
 export const toggleModalPreset = store => {
     const newState = !store.state.modalPreset.isActive;
     store.setState({...store.state, modalPreset:{isActive: newState}});
-    console.log('preset')
 }
 
 export const toggleModalProfile = store => {

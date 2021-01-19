@@ -12,12 +12,21 @@ function ModalSession() {
     const auth = useContext(AuthContext)
 
     useEffect(() => {
-        fetchData(`user.settingsPresets?token=${auth.token}`, {
+        fetchData(`user.settingsPresets.get?token=${auth.token}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
             }
         }, globalActions.settings.setSettings)
+    }, [])
+
+    useEffect(() => {
+        fetchData(`user.profiles.get?token=${auth.token}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }, globalActions.profiles.setInitProfiles)
     }, [])
 
     const presets = [
@@ -40,7 +49,6 @@ function ModalSession() {
     return (
             <ModalWindow name={propsData.name} closeModal={globalActions.modals.toggleModalSession}>
 
-                {console.log('Сессии МОДАЛ')}
                 <div onClick={() => {
                     globalActions.modals.toggleModalSession(propsData)
                     globalActions.modals.toggleModalAccount(propsData)
@@ -70,7 +78,7 @@ function ModalSession() {
                         <label className={css.label} htmlFor="profile">Выберете профиль для прогрева</label>
                         <select name="profile" id="profile">
                             {
-                                profiles.map((el, index) => {
+                                globalState.profiles.map((el, index) => {
                                     return <option key={index} value={`${el}`}>{el}</option>
                                 })
                             }

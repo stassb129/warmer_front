@@ -19,7 +19,6 @@ function ModalAccount() {
     return (
             // <ModalPortal>
                 <ModalWindow height={{height: '90%'}} closeModal={globalActions.modals.toggleModalAccount}>
-                    {console.log("АККАУНТ МОДАЛ")}
                     <div className={css.modalContent}>
 
                         <div className={css.description}>

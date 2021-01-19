@@ -25,7 +25,7 @@ function UserPanelAccounts() {
             }
         }, setAccounts)
 
-        fetchData(`user.settingsPresets?token=${auth.token}`, {
+        fetchData(`user.settingsPresets.get?token=${auth.token}`, {
             method: 'GET',
             headers: {
                 'Content-Type': 'application/json'
@@ -62,7 +62,7 @@ function UserPanelAccounts() {
     return (
         <div className={css.accounts}>
 
-            {console.log(accounts)}
+            {/*{console.log(accounts)}*/}
             <UserPanelUnderHeader
                 name="Аккаунты"
                 description="Тут вы можете что-нибудь аккаунтить"/>

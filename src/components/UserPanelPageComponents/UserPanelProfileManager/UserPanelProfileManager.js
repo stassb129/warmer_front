@@ -5,12 +5,14 @@ import {useEffect} from "react";
 import {AuthContext} from "../../../context/AuthContext";
 import {useContext} from "react";
 import UserPanelUnderHeader from "../UserPanelUnderHeader/UserPanelUnderHeader";
+import useGlobal from "../../../Store/Store";
+import Preloader from "../../main/Preloader/Preloader";
 
 function UserPanelProfileManager() {
 
 
-    const [accounts, setAccounts] = useState([])
     const [SessionModal, setSessionModal] = useState()
+    const [globalState, globalActions] = useGlobal()
 
     const auth = useContext(AuthContext)
 
@@ -22,37 +24,26 @@ function UserPanelProfileManager() {
         {name: 'YouPso1'}
     ]
 
-    // useEffect(() => {
-    //     fetchData(`user.accounts?token=${auth.token}`, {
-    //         method: 'GET',
-    //         headers: {
-    //             'Content-Type': 'application/json'
-    //         }
-    //     }, setAccounts)
-    // }, [])
+    useEffect(() => {
+        fetchData(`user.profiles.get?token=${auth.token}`, {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json'
+            }
+        }, globalActions.profiles.setInitProfiles)
+    }, [])
 
 
-    // if (accounts.length < 1) {
-    //     return (
-    //         <div>
-    //             <UserPanelUnderHeader
-    //                 name="Аккаунты"
-    //                 description="Тут вы можете что-нибудь аккаунтить"/>
-    //             <Preloader/>
-    //         </div>
-    //     )
-    // }
-
-    // const accountCounts = accounts.map((e, index) =>
-    //
-    //         <UserPanelAccount
-    //             seller={e.seller.name}
-    //             login={e.login}
-    //             key={index}
-    //             data={e}
-    //         />
-    // )
-
+    if (globalState.profiles.length < 1) {
+        return (
+            <div>
+                <UserPanelUnderHeader
+                    name="Аккаунты"
+                    description="Тут вы можете что-нибудь аккаунтить"/>
+                <Preloader/>
+            </div>
+        )
+    }
 
     return (
         <section>
@@ -64,7 +55,7 @@ function UserPanelProfileManager() {
             <div className="panelContainer">
                 <div className={css.profiles}>
                     {
-                        profiles.map((el, index) => {
+                        globalState.profiles.map((el, index) => {
                             return <div key={index} className={css.profile}>
                                 <h3>{el.name}</h3>
                                 <button className={css.download}>Скачать</button>

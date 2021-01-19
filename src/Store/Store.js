@@ -26,7 +26,8 @@ const initialState = {
     },
 
     //Настройки
-    settings: []
+    settings: [],
+    profiles: []
 };
 
 
